@@ -90,10 +90,10 @@ if __name__ == '__main__':
         nn.Linear(1920, 960),
         nn.ReLU(),
         nn.Dropout(0.25),
-        nn.Linear(960, 960),
+        nn.Linear(960, 480),
         nn.ReLU(),
         nn.Dropout(0.25),
-        nn.Linear(960, 1)
+        nn.Linear(480, 1)
     )
 
     # Create new head, including the existing layers except the classifier
