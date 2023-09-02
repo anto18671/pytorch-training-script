@@ -47,6 +47,7 @@ This script encompasses the initialization of hyperparameters, data transformati
 train_dir = r'path_to_training_data'
 validation_dir = r'path_to_validation_data'
 output_dir = r'path_to_output_directory'
+python```
 
 2. Run the script: python train.py
 
