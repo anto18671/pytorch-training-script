@@ -1,58 +1,56 @@
 # pytorch-training-script
 
-This script provides a straightforward implementation for training an image classifier using PyTorch and EfficientNetV2. Below is a brief description of the main components of the script.
+This script offers a straightforward implementation for training an image classifier using **PyTorch** and **EfficientNetV2**.
 
-Dependencies:
--------------
+## 📋 Table of Contents
+- [Dependencies](#dependencies)
+- [Script Structure](#script-structure)
+- [Highlights](#highlights)
+- [How to Run](#how-to-run)
+- [Note](#note)
+
+## 🛠 Dependencies
 - PyTorch
 - torchvision
 - tqdm
 - numpy
 - matplotlib
 
-Script Structure:
------------------
+## 📖 Script Structure
 
-1. **Importing Necessary Libraries:**
-   All the necessary packages for data processing, model definition, training, and visualization are imported.
+### 1. **Importing Libraries**
+All the essential packages for data processing, model definition, training, and visualization are imported.
 
-2. **EMA (Exponential Moving Average) Class:**
-   This utility class helps in maintaining an exponential moving average of model parameters, which can sometimes be useful for validation.
+### 2. **EMA (Exponential Moving Average) Class**
+A utility class that assists in maintaining an exponential moving average of model parameters. This is particularly beneficial for validation.
 
-3. **Utility Function:**
-   - `count_parameters`: Returns the number of trainable parameters in a given model.
+### 3. **Utility Function**
+- `count_parameters`: A function to return the count of trainable parameters in a given model.
 
-4. **Main Script:**
-   The main script initializes hyperparameters, sets up data transformations, loads the dataset, defines the model structure, and carries out the training loop. At the end of each epoch, it saves the model's weights and plots the training and validation loss and accuracy.
+### 4. **Main Script**
+This script encompasses the initialization of hyperparameters, data transformations, dataset loading, model structure definition, and execution of the training loop. After each epoch concludes, the model's weights are saved, and both the training and validation losses and accuracies are plotted.
 
-Highlights:
------------
+## 🌟 Highlights
 
-- **Data Loading and Transformation:**
-  Uses `ImageFolder` for loading images from directories and applies a series of transformations to preprocess the data. 
+- **Data Loading and Transformation:** Employs `ImageFolder` to load images from directories and subsequently applies a series of transformations for data preprocessing.
 
-- **Model:**
-  Utilizes the EfficientNetV2 architecture from the `torch.hub`. Additionally, the script replaces the classifier head of the pre-trained model with a custom-defined classifier suitable for binary classification.
+- **Model:** Leverages the EfficientNetV2 architecture available in `torch.hub`. The classifier head of the pre-trained model is replaced with a custom classifier tailored for binary classification.
 
-- **Training Loop:**
-  Uses a combination of the AdamW optimizer and the Binary Cross Entropy with Logits loss. The script also takes into consideration class weights to handle any class imbalance.
+- **Training Loop:** The loop makes use of the AdamW optimizer combined with the Binary Cross Entropy with Logits loss. Additionally, class weights are considered to counteract any class imbalances.
 
-- **Visualization:**
-  At the end of each epoch, the script plots the training and validation loss and accuracy, saving the plots as PNG images.
+- **Visualization:** Post each epoch, the script visualizes and saves the training and validation loss and accuracy as PNG images.
 
-How to Run:
------------
+## 🚀 How to Run
 
-1. Define the paths:
+1. **Set Paths:**
+```python
 train_dir = r'path_to_training_data'
 validation_dir = r'path_to_validation_data'
 output_dir = r'path_to_output_directory'
 
-2. Run the script:
-python train.py
+2. Run the script: python train.py
 
 3. The trained models will be saved in the `output_dir` as 'model_{epoch_number}.pt'. Additionally, training plots for each epoch will also be saved in the same directory.
 
-Note:
------
+⚠️ Note
 Before running the script, ensure you have adequate storage and computational resources, especially if you're training on high-resolution images with a deep neural network like EfficientNetV2.
