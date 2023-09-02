@@ -7,7 +7,7 @@ This script offers a straightforward implementation for training an image classi
 - [Script Structure](#-script-structure)
 - [Highlights](#-highlights)
 - [How to Run](#-how-to-run)
-- [Note](#⚠️-note)
+- [Note](#-note)
 
 ## 🛠 Dependencies
 - PyTorch
@@ -61,5 +61,5 @@ python train.py
 
 3. The trained models will be saved in the `output_dir` as 'model_{epoch_number}.pt'. Additionally, training plots for each epoch will also be saved in the same directory.
 
-### ⚠️ Note
+## ⚠️ Note
 Before running the script, ensure you have adequate storage and computational resources, especially if you're training on high-resolution images with a deep neural network like EfficientNetV2.
