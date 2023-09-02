@@ -43,13 +43,17 @@ This script encompasses the initialization of hyperparameters, data transformati
 ## 🚀 How to Run
 
 1. **Set Paths:**
-```python
+```
 train_dir = r'path_to_training_data'
 validation_dir = r'path_to_validation_data'
 output_dir = r'path_to_output_directory'
-python```
+```
 
-2. Run the script: python train.py
+
+2. Run the script:
+```
+python train.py
+```
 
 3. The trained models will be saved in the `output_dir` as 'model_{epoch_number}.pt'. Additionally, training plots for each epoch will also be saved in the same directory.
 
